@@ -1,0 +1,25 @@
+package com.ip2location;
+
+public enum HttpHeader {
+	X_FORWARDED_FOR("X-Forwarded-For"),
+	PROXY_CLIENT_IP("Proxy-Client-IP"),
+	HTTP_CLIENT_IP("HTTP_CLIENT_IP"),
+	HTTP_X_FORWARDED_FOR("HTTP_X_FORWARDED_FOR"),
+	HTTP_X_AB_FORWARD("HTTP_X_AB_FORWARD"),
+	HTTP_CF_CONNECTING_IP("HTTP_CF_CONNECTING_IP"),
+	CF_CONNECTING_IP("CF_CONNECTING_IP"),
+	X_CF_CONNECTING_IP("X_CF_CONNECTING_IP"),
+	HTTP_X_CF_CONNECTING_IP("HTTP_X_CF_CONNECTING_IP"),
+	HTTP_X_CLUSTER_CLIENT_IP("HTTP_X_CLUSTER_CLIENT_IP"),
+	INF_SIMULATED_IP("INF_SIMULATED_IP");
+
+	private String key;
+
+	private HttpHeader(String key) {
+		this.key = key;
+	}
+
+	public String key() {
+		return this.key;
+	}
+}
